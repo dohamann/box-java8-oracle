@@ -28,6 +28,7 @@ script: |-
   sudo add-apt-repository ppa:cwchien/gradle -y
   sudo apt-get update
   sudo apt-get install gradle -y
+  apt-get --yes --force-yes upgrade
 
   # Install ant
   sudo apt-get install ant ant-contrib ivy ivy-doc -y -qq
