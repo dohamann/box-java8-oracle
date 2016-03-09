@@ -34,7 +34,7 @@ script: |-
   sudo apt-get install ant ant-contrib ivy ivy-doc -y -qq
   
   # Install column
-  sudo apt-get install column -y
+  sudo apt-get install tree -y
 
    # We should have ant and ivy available
   type ant || { echo "I expected ant to be available. Aborting."; exit 1; }
