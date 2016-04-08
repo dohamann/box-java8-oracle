@@ -1,5 +1,5 @@
 name: java8-oracle
-version: 0.0.2
+version: 0.0.3
 description: Java8 box provisioned with the Oracle distribution via the webupd8team ppa. Comes with maven, ant and gradle 
 keywords:
   - java
@@ -20,7 +20,11 @@ script: |-
   echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
   sudo apt-get install oracle-java8-installer -qq
   sudo apt-get install oracle-java8-set-default -y
-
+  
+  # Fix issues with monocle with missing libraries
+  sudo apt-get install libgtk-3-dev -y
+  sudo apt-get install libswt-gtk-3-java -y
+  
   # Install maven
   sudo apt-get install maven
 
