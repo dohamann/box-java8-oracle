@@ -21,9 +21,11 @@ script: |-
   sudo apt-get install oracle-java8-installer -qq
   sudo apt-get install oracle-java8-set-default -y
   
-  # Fix issues with monocle with missing libraries
+  # Libs and fonts for headless ui tests with TestFX and Monocle
   sudo apt-get install libgtk-3-dev -y
   sudo apt-get install libswt-gtk-3-java -y
+  sudo apt-get install msttcorefonts -y
+  sudo apt-get install ttf-mscorefonts-installer -y
   
   # Install maven
   sudo apt-get install maven
